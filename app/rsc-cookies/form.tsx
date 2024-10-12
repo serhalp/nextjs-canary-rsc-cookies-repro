@@ -1,9 +1,10 @@
-'use client'
+"use client";
 
-import { useActionState } from 'react'
+import { useActionState } from "react";
 
-export function Form({ action }) {
-  const [state, formAction] = useActionState(action, null)
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export function Form({ action }: { action: any }) {
+  const [state, formAction] = useActionState(action, null);
 
   return (
     <form action={formAction}>
@@ -12,5 +13,5 @@ export function Form({ action }) {
         server action
       </button>
     </form>
-  )
+  );
 }

@@ -1,6 +1,7 @@
-import type { NextRequest, NextResponse } from "next/server";
+import type { NextRequest } from "next/server";
 
-export default (req: NextRequest, res: NextResponse) => {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export default (req: NextRequest, res: any) => {
   return res
     .status(200)
     .setHeader("headers-from-serverless", "1")
